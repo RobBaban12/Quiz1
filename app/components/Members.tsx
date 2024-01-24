@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import MemberCard from "./MemberCard";
+import { motion } from "framer-motion";
 
 const members: {
 	name: string;
@@ -36,15 +39,35 @@ const members: {
 const Members = () => {
 	return (
 		<div
-			className={"flex flex-col items-center min-h-screen gap-10 w-full text-center"}
+			className={
+				"flex flex-col items-center min-h-screen gap-10 w-full text-center"
+			}
 			id="Whatwedo"
 		>
 			<h2>Meet the Innoventors</h2>
-			<p>We believe in the power of technology not just as a tool, but as an extension of human potential to make life better, easier, and more connected.</p>
-			<div className={"flex items-center justify-center gap-20 px-5 w-full"}>
-				{members.slice(0, -2).map(({ name, role, motto }) => (
+			<p>
+				We believe in the power of technology not just as a tool, but as an
+				extension of human potential to make life better, easier, and more
+				connected.
+			</p>
+			<motion.div
+				className={"-z-10 flex items-center justify-center gap-20 px-5 w-full"}
+			>
+				{members.slice(0, -2).map(({ name, role, motto }, index) => (
 					<MemberCard
-						key={name}
+						key={index}
+						name={name}
+						image="image"
+						role={role}
+						motto={motto}
+						
+					/>
+				))}
+			</motion.div>
+			<div className="-z-10 flex items-center gap-20">
+				{members.slice(-2).map(({ name, role, motto }, index) => (
+					<MemberCard
+						key={index}
 						name={name}
 						image="image"
 						role={role}
@@ -52,17 +75,6 @@ const Members = () => {
 					/>
 				))}
 			</div>
-			<div className="flex items-center gap-20">
-					{members.slice(-2).map(({ name, role, motto }) => (
-						<MemberCard
-							key={name}
-							name={name}
-							image="image"
-							role={role}
-							motto={motto}
-						/>
-					))}
-				</div>
 		</div>
 	);
 };
