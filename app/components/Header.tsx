@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
-
-import { motion, scroll, useAnimate, useMotionValueEvent, useScroll } from "framer-motion";
-import { useEffect } from "react";
+import {
+  motion,
+  useAnimate,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 
 const navlinks: {
   name: string;
@@ -29,12 +32,12 @@ const navlinks: {
 
 const Header = () => {
   const [scope, anim] = useAnimate();
-
   const { scrollY } = useScroll();
-
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest)
-    latest >= 600 ? anim(scope.current, { y: 0 }, { ease: "easeOut" }) : anim(scope.current, { y: -60 }, { ease: "easeOut" })
+    console.log(latest);
+    latest >= 600
+      ? anim(scope.current, { y: 0 }, { ease: "easeOut" })
+      : anim(scope.current, { y: -60 }, { ease: "easeOut" });
   });
 
   return (
@@ -46,7 +49,7 @@ const Header = () => {
       initial={{ y: -60 }}
     >
       {navlinks.map(({ name, href }, index) => (
-        <Link key={index} href={href}>
+        <Link key={index} href={href} className="flex items-center gap-1">
           {name}
         </Link>
       ))}

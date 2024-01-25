@@ -6,7 +6,7 @@ const Start = () => {
 	return (
 		<div
 			className={
-				"flex flex-col min-h-screen justify-center text-center align-middle"
+				"flex flex-col min-h-screen justify-center text-center align-middle mx-10"
 			}
 		>
 			<motion.h1

@@ -18,20 +18,19 @@ const MemberCard = ({
 	return (
 		<motion.div
 			className={
-				"flex flex-col min-h-60 bg-neutral-300 dark:bg-neutral-800 justify-center  min-w-40 gap-1 "
+				"flex flex-col bg-neutral-300 dark:bg-neutral-800 justify-center gap-1 px-2 py-4"
 			}
 			initial={{ opacity: 0, y: 50 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ duration: 1 }}
 		>
-			<div className="min-h-full">
-				
+			<div className="min-w-60 md:min-w-44 min-h-40 align-middle flex flex-col justify-center">
 				<div>{image}</div>
 				<div>{name}</div>
 				<div>{role}</div>
 				<div>{motto}</div>
 			</div>
-			<div className={" h-1/2 flex justify-center gap-1"}>
+			<div className={"min-h-40 flex justify-center items-end align-bottom gap-1"}>
 				<button>
 					<FaTwitter />
 				</button>
