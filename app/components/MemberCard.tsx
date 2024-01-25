@@ -25,6 +25,7 @@ const MemberCard = ({
 			transition={{ duration: 1 }}
 		>
 			<div className="min-h-full">
+				
 				<div>{image}</div>
 				<div>{name}</div>
 				<div>{role}</div>
