@@ -24,13 +24,13 @@ const MemberCard = ({
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ duration: 1 }}
 		>
-			<div className="h-1/2">
+			<div className="min-h-full">
 				<div>{image}</div>
 				<div>{name}</div>
 				<div>{role}</div>
 				<div>{motto}</div>
 			</div>
-			<div className={" h-1/2  flex justify-center gap-1"}>
+			<div className={" h-1/2 flex justify-center gap-1"}>
 				<button>
 					<FaTwitter />
 				</button>

@@ -1,59 +1,57 @@
-'use client'
+"use client";
 
+import Link from "next/link";
 
-import Link from "next/link"
-import { useState } from "react"
+import { motion, scroll, useAnimate, useMotionValueEvent, useScroll } from "framer-motion";
+import { useEffect } from "react";
 
-import { motion, scroll, useAnimation } from "framer-motion";
-
-const navlinks : {
-  name: string,
-  href: string
+const navlinks: {
+  name: string;
+  href: string;
 }[] = [
   {
     name: "Home",
-    href: "/"
+    href: "/",
   },
   {
     name: "What we do",
-    href: "#Whatwedo"
+    href: "#Whatwedo",
   },
   {
     name: "Projects",
-    href: "#projects"
+    href: "#projects",
   },
   {
     name: "Contacts",
-    href: "#contacts"
-  }
-]
+    href: "#contacts",
+  },
+];
 
 const Header = () => {
+  const [scope, anim] = useAnimate();
 
-  const anim = useAnimation()
+  const { scrollY } = useScroll();
 
-  const [Appear, setAppear] = useState<boolean>(false)
-
-  scroll(progress => {
-    console.log(progress)
-    progress >= 0.3 ? anim.start({ y: 0 }) : anim.start({ y: -60 })
-})
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log(latest)
+    latest >= 600 ? anim(scope.current, { y: 0 }, { ease: "easeOut" }) : anim(scope.current, { y: -60 }, { ease: "easeOut" })
+  });
 
   return (
     <motion.nav
+      ref={scope}
       className={`
       fixed flex gap-10 min-h-10 align-middle items-center justify-center bg-zinc-200 dark:bg-zinc-700 w-full
     `}
-      animate={anim}
       initial={{ y: -60 }}
     >
-      {
-        navlinks.map(({name, href}, index) => 
-          <Link key={index} href={href}>{name}</Link>
-        )
-      }
+      {navlinks.map(({ name, href }, index) => (
+        <Link key={index} href={href}>
+          {name}
+        </Link>
+      ))}
     </motion.nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

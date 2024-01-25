@@ -4,6 +4,7 @@ import React from "react";
 import MemberCard from "./MemberCard";
 import { motion } from "framer-motion";
 
+
 const members: {
 	name: string;
 	role: string;
@@ -57,7 +58,7 @@ const Members = () => {
 					<MemberCard
 						key={index}
 						name={name}
-						image="image"
+						image="Image"
 						role={role}
 						motto={motto}
 						
@@ -69,7 +70,7 @@ const Members = () => {
 					<MemberCard
 						key={index}
 						name={name}
-						image="image"
+						image="Image"
 						role={role}
 						motto={motto}
 					/>
