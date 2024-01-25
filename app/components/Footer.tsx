@@ -10,15 +10,29 @@ const Footer = () => {
   return (
     <div
       className={
-        "bg-zinc-400 flex flex-col min-h-52 dark:bg-zinc-800  w-full align-middle items-center justify-end"
+        "bg-zinc-400 flex flex-col min-h-52 dark:bg-zinc-800 w-full align-middle items-center justify-end"
       }
     >
       <div
-        className={"relative justify-evenly h-full flex w-full pb-10 gap-10"}
+        className={
+          "relative justify-evenly h-full flex pb-10 gap-10"
+        }
       >
-        <Image className="dark:hidden" src={logo} width={100} alt="logo" />
-        <Image className="hidden dark:block" src={darklogo} width={100} alt="logo" />
-        <div className={"flex gap-5"}>
+        <Image
+          className="dark:hidden block"
+          src={logo}
+          width={120}
+          height={100}
+          alt="logo"
+        />
+        <Image
+          className="hidden dark:block"
+          src={darklogo}
+          width={120}
+          height={100}
+          alt="logo"
+        />
+        <div className={"gap-10 md:flex hidden"}>
           <div>
             Product
             <ul>

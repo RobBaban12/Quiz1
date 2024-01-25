@@ -25,33 +25,30 @@ export const members: {
   },
   {
     name: "Wendell Dador",
-
     image: wends,
-    role: "Senior Dev",
-    motto: "I code with a smile and a cup of coffee!",
+    role: "Fullstack",
+    motto: "nagsusumalangit",
     fact: "",
   },
   {
     name: "Love Faith Alcorin",
 
     image: elef,
-    role: "Front-end",
+    role: "Front-End",
     motto: "I create designs that make people go, 'Wow!'",
     fact: "",
   },
   {
     name: "Joshua Samenian",
-
     image: joshua,
     role: "Pitcher",
-    motto: "I turn imagination into pixels!",
+    motto: "If di mo kaya, pagawa mo sa iba",
     fact: "",
   },
   {
     name: "Onil Martinez",
-
     image: onil,
-    role: "Front-end",
+    role: "Front-End",
     motto: "I turn caffeine into code!",
     fact: "",
   },

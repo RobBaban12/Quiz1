@@ -13,16 +13,16 @@ const Start = () => {
       }
     >
         <Image
-          className={"dark:hidden absolute opacity-15 self-center "}
+          className={"dark:hidden absolute opacity-15 self-center -translate-y-60"}
           src={logo}
           alt="logo"
-          width={500}
+          width={480}
         />
         <Image
           className={"hidden dark:block absolute opacity-15 self-center -translate-y-60"}
           src={dlogo}
           alt="logo"
-          width={500}
+          width={480}
         />
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
@@ -37,14 +37,14 @@ const Start = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
         >
-          We are the Innoventors, a vibrant team of first-year software
+          We are the <span className="font-bold text-md">Innoventors </span>, a vibrant team of first-year software
           engineering students united by our passion for innovation and our
           drive to invent. With diverse backgrounds but a shared vision.
         </motion.p>
 				<motion.div
 				initial={{ opacity: 0, y: 50 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ ease: "easeOut", duration: 2, delay: 1 }}
+				transition={{ ease: "easeOut", duration: 2, delay: 1.5 }}
 				className="flex items-center flex-col justify-center"
 				>
 			<Image

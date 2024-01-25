@@ -20,15 +20,15 @@ const Members = () => {
 
       <div
         className={
-          "hidden -z-10 md:flex items-center justify-center gap-20 px-5 w-full"
+          "hidden -z-10 lg:flex items-center justify-center gap-20 px-5 w-full"
         }
       >
         {showMembers(0, -2)}
       </div>
-      <div className="hidden -z-10 md:flex items-center gap-20">
+      <div className="hidden -z-10 lg:flex items-center gap-20">
         {showMembers(-2)}
       </div>
-      <div className={"flex flex-col -z-10 md:hidden items-center gap-20"}>
+      <div className={"flex flex-col -z-10 lg:hidden items-center gap-20"}>
         {showMembers(0)}
       </div>
     </div>

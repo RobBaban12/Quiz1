@@ -7,9 +7,10 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { FaMoon, FaRegMoon } from "react-icons/fa";
+import Image from "next/image";
+import { dlogo, logo } from "../utils/utils";
 
-const navlinks : {
+const navlinks: {
   name: string;
   href: string;
 }[] = [
@@ -32,7 +33,6 @@ const navlinks : {
 ];
 
 const Header = () => {
-
   const [scope, anim] = useAnimate();
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -40,7 +40,7 @@ const Header = () => {
       ? anim(scope.current, { y: 0 }, { ease: "easeOut" })
       : anim(scope.current, { y: -60 }, { ease: "easeOut" });
   });
-  
+
   return (
     <motion.nav
       ref={scope}
@@ -49,6 +49,30 @@ const Header = () => {
     `}
       initial={{ y: -60 }}
     >
+      <div>
+        {/* <Image
+          className={"dark:hidden absolute self-center "}
+          src={logo}
+          alt="logo"
+          width={50}
+  /> */}
+        <Link href={"#"}>
+          <Image
+            className={"absolute self-center -translate-y-5"}
+            src={dlogo}
+            alt="logo"
+            width={40}
+            height={40}
+          />
+          <Image
+            className={"dark:hidden absolute self-center -translate-y-5"}
+            src={logo}
+            alt="logo"
+            width={40}
+            height={40}
+          />
+        </Link>
+      </div>
       <div className="flex align-middle items-center justify-center gap-10">
         {navlinks.map(({ name, href }, index) => (
           <Link key={index} href={href} className="flex items-center gap-1">

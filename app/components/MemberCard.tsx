@@ -30,7 +30,7 @@ const MemberCard = ({
       <div className="min-w-60 md:max-w-44 align-middle flex flex-col justify-center items-center gap-3">
         <Image src={image} alt={name} height={200} />
         <h3 className={"text-xl font-bold"}>{name}</h3>
-        <div className=" text-teal-200">{role}</div>
+        <div className=" dark:text-teal-200 text-teal-700">{role}</div>
       </div>
       <div className="max-w-40 self-center h-20">
         {`"${motto}"`}
