@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { FaMoon, FaRegMoon } from "react-icons/fa";
 
-const navlinks: {
+const navlinks : {
   name: string;
   href: string;
 }[] = [
@@ -32,6 +32,7 @@ const navlinks: {
 ];
 
 const Header = () => {
+
   const [scope, anim] = useAnimate();
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -39,6 +40,7 @@ const Header = () => {
       ? anim(scope.current, { y: 0 }, { ease: "easeOut" })
       : anim(scope.current, { y: -60 }, { ease: "easeOut" });
   });
+  
   return (
     <motion.nav
       ref={scope}

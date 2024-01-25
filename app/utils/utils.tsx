@@ -1,36 +1,59 @@
 import MemberCard from "../components/MemberCard";
-import logo from "@/public/logo/Innoventors.png"
-import dlogo from "@/public/logo/InnoventorsDark.png"
+import logo from "@/public/logo/Innoventors.png";
+import dlogo from "@/public/logo/InnoventorsDark.png";
+
+import elef from "@/public/img/elef.jpg";
+import joshua from "@/public/img/joshua.jpg";
+import onil from "@/public/img/onil.jpg";
+import rob from "@/public/img/rob.jpg";
+import wends from "@/public/img/wends.jpg";
+import { StaticImageData } from "next/image";
 
 export const members: {
   name: string;
+  image: StaticImageData;
   role: string;
-  motto: string;
+  motto: String;
+  fact: string;
 }[] = [
   {
     name: "Rob Baban",
-    role: "leader",
-    motto: "",
+    image: rob,
+    role: "Leader",
+    motto: "I make bugs disappear like magic!",
+    fact: "",
   },
   {
     name: "Wendell Dador",
-    role: "Front-end & Back-end",
-    motto: "",
+
+    image: wends,
+    role: "Senior Dev",
+    motto: "I code with a smile and a cup of coffee!",
+    fact: "",
   },
   {
     name: "Love Faith Alcorin",
+
+    image: elef,
     role: "Front-end",
-    motto: "",
+    motto: "I create designs that make people go, 'Wow!'",
+    fact: "",
   },
   {
     name: "Joshua Samenian",
+
+    image: joshua,
     role: "Pitcher",
-    motto: "",
+    motto: "I turn imagination into pixels!",
+    fact: "",
   },
   {
     name: "Onil Martinez",
+
+    image: onil,
     role: "Front-end",
-    motto: "",
+    motto: "I turn caffeine into code!",
+    fact: "",
   },
 ];
 
@@ -40,16 +63,16 @@ export const showMembers = (
 ) => {
   return members
     .slice(start, end)
-    .map(({ name, role, motto }, index) => (
+    .map(({ name, image, role, motto, fact }, index) => (
       <MemberCard
         key={index}
         name={name}
-        image="Image"
+        image={image}
         role={role}
         motto={motto}
-
+        fact={fact}
       />
     ));
 };
 
-export { logo, dlogo }
+export { logo, dlogo };
