@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { dlogo, logo } from "../utils/utils";
+import Image from "next/image";
+
 
 const Start = () => {
 	return (
@@ -26,6 +29,9 @@ const Start = () => {
 				engineering students united by our passion for innovation and our drive
 				to invent. With diverse backgrounds but a shared vision.
 			</motion.p>
+			<Image className={"dark:hidden absolute opacity-15 self-center"} src={logo} alt="logo" width={500} />
+			<Image className={"hidden dark:block absolute opacity-15 self-center"} src={dlogo} alt="logo" width={500} />
+
 		</div>
 	);
 };

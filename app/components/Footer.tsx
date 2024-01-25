@@ -4,18 +4,20 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import next from "@/public/next.svg";
 import Image from "next/image";
 import { FaRegCopyright } from "react-icons/fa6";
-
+import logo from "@/public/logo/Innoventors.png";
+import darklogo from "@/public/logo/InnoventorsDark.png";
 const Footer = () => {
   return (
     <div
       className={
-        "relative  flex flex-col min-h-52 bg-zinc-800 w-full align-middle items-center justify-end"
+        "bg-zinc-400 flex flex-col min-h-52 dark:bg-zinc-800  w-full align-middle items-center justify-end"
       }
     >
       <div
         className={"relative justify-evenly h-full flex w-full pb-10 gap-10"}
       >
-        <div className={""}>Logo</div>
+        <Image className="dark:hidden" src={logo} width={100} alt="logo" />
+        <Image className="hidden dark:block" src={darklogo} width={100} alt="logo" />
         <div className={"flex gap-5"}>
           <div>
             Product
@@ -71,7 +73,11 @@ const Footer = () => {
           </button>
         </div>
 
-        <div className={"flex items-center gap-1 bg-neutral-500 py-1 px-2 rounded-md text-black"}>
+        <div
+          className={
+            "flex items-center gap-1 bg-neutral-500 py-1 px-2 rounded-md text-black"
+          }
+        >
           <FaRegCopyright />
           2024 Innoventors. Created with
           <span className={"pl-1"}>

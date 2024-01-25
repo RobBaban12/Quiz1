@@ -1,6 +1,5 @@
 import React from "react";
-import MemberCard from "./MemberCard";
-import { members, showMembers } from "../utils/utils";
+import { showMembers } from "../utils/utils";
 
 const Members = () => {
   return (

@@ -1,4 +1,6 @@
 import MemberCard from "../components/MemberCard";
+import logo from "@/public/logo/Innoventors.png"
+import dlogo from "@/public/logo/InnoventorsDark.png"
 
 export const members: {
   name: string;
@@ -45,6 +47,9 @@ export const showMembers = (
         image="Image"
         role={role}
         motto={motto}
+
       />
     ));
 };
+
+export { logo, dlogo }
