@@ -15,7 +15,7 @@ const Footer = () => {
     >
       <div
         className={
-          "relative justify-evenly h-full flex pb-10 gap-10"
+          "relative justify-around h-full flex pb-10 gap-10"
         }
       >
         <Image
@@ -32,7 +32,7 @@ const Footer = () => {
           height={100}
           alt="logo"
         />
-        <div className={"gap-10 md:flex hidden"}>
+        <div className={"gap-10 hidden md:flex"}>
           <div>
             Product
             <ul>

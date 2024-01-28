@@ -52,6 +52,7 @@ export const members: {
     motto: "I turn caffeine into code!",
     fact: "",
   },
+  
 ];
 
 export const showMembers = (

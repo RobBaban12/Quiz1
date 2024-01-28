@@ -44,7 +44,7 @@ const Start = () => {
 				<motion.div
 				initial={{ opacity: 0, y: 50 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ ease: "easeOut", duration: 2, delay: 1.5 }}
+				transition={{ ease: "easeOut", duration: 2, delay: 1 }}
 				className="flex items-center flex-col justify-center"
 				>
 			<Image
